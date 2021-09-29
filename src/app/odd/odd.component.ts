@@ -10,19 +10,10 @@ import {
   templateUrl: './odd.component.html',
   styleUrls: ['./odd.component.css']
 })
-export class OddComponent implements OnInit, DoCheck {
+export class OddComponent implements OnInit {
 
-  @Input() oddNumber: number;
-
-  oddNumbers = [];
-
-  ngDoCheck() {
-    // console.log(this.oddNumber);
-    console.log(this.oddNumbers);
-    if (this.oddNumber % 2 === 0) {
-      this.oddNumbers.push(this.oddNumber)
-    };
-  }
+  @Input() oddNumbers: number;
+  // @Input() number:
 
   constructor() {
 

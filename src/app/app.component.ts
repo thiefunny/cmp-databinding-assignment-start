@@ -7,11 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-sendToChildren: number;
+sendOddNumbers = [];
+sendEvenNumbers = [];
 
-onNumberReceived(nextNumber:number) {
+onNumberReceived(receivedNumber:number) {
   
-  return this.sendToChildren = nextNumber;
-  
+  return receivedNumber % 2 === 1 ? this.sendOddNumbers.push(receivedNumber) : this.sendEvenNumbers.push(receivedNumber);
+
 }
 }
