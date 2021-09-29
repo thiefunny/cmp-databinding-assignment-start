@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+sendToChildren: number;
+
+onNumberReceived(nextNumber:number) {
+  
+  return this.sendToChildren = nextNumber;
+  
+}
 }
